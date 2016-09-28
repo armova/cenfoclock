@@ -1,0 +1,182 @@
+*, *:after, *:before { -webkit-box-sizing: border-box; box-sizing: border-box; }
+.clearfix:before, .clearfix:after { content: ''; display: table; }
+.clearfix:after { clear: both; }
+
+body {
+	background-repeat: no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+	height: auto;
+	color: #fff;
+	font-weight: 300;
+	font-size: 1em;
+	position: relative;
+	font-family: 'Open Sans', sans-serif;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+}
+
+.bg-purple{
+	background-image: url({3vot}/assets/background-lg-purple.jpg);
+}
+.bg-orange{
+	background-image: url({3vot}/assets/background-lg-orange.jpg);
+}
+.bg-red{
+	background-image: url({3vot}/assets/background-lg-red.jpg);
+}
+
+
+header {
+	position: fixed;
+	bottom: 10%;
+	width: 100%;
+	text-align: center;
+}
+header .logo {
+	display: inline-block;
+	height: 100px;
+	width: 200px;
+	-webkit-background-size: 100% auto;
+	background-size: 100% auto;
+	background-repeat: no-repeat;
+	background-position: top center;
+	margin: 0 auto;
+	opacity: .9; 
+}
+.logo.cenfotec {background-image: url({3vot}/assets/logo-cenfotec.png);}
+
+
+.centered {
+  position: absolute;
+  left: 50%;
+  top: 40%;
+  width: 90%;
+  -webkit-transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+  -o-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+.cont {
+	width: 95%;
+}
+
+.title {
+	text-align: center;
+	font-size: 5em;
+	text-shadow: 1px 2px 2px rgba(0,0,0,.2);
+	margin: 0 0 .8em
+}
+.countdown {
+	display: inline-block;
+	margin: 0 1em;
+	/*min-width: 92px;*/
+}
+
+.countdown .number{
+	width: 100%;
+	min-width: 150px;
+	/*max-width: 92px;*/
+	font: bold 5em 'Droid Sans', Arial, sans-serif;
+	text-align: center;
+	font-size: 15em;
+	display: inline-block;
+	color: #111;
+	background-color: #ddd;
+	background-image: -webkit-linear-gradient(top, #bbb, #eee); 
+	background-image:    -moz-linear-gradient(top, #bbb, #eee);
+	background-image:     -ms-linear-gradient(top, #bbb, #eee);
+	background-image:      -o-linear-gradient(top, #bbb, #eee);
+	border-top: 1px solid #fff;
+	border-radius: 3px;
+	box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.7);
+	margin: 0 7px;
+	padding: 18px;
+	display: inline-block;
+	position: relative;
+}
+
+.countdown .number:before{
+	content:"";
+	width: 100%;
+	height: 13px;
+	background: #111;
+	display: block;
+	padding: 0 3px;
+	position: absolute;
+	top: 41%; left: -3px;
+	z-index: -1;
+}
+
+.countdown .number:after{
+	content:"";
+	width: 100%;
+	height: 1px;
+	background: #eee;
+	border-top: 1px solid #333;
+	display: block;
+	position: absolute;
+	top: 48%; left: 0;
+}
+
+.countdown .label {
+	display: block;
+	font-size: 2em;
+	font-weight: 300;
+	text-shadow: 1px 2px 2px rgba(0,0,0,.3);
+	margin: .5em 0 0
+}
+.countdown-cont{
+	position: relative;
+}
+
+.plusTimeMessage{
+	position: absolute;
+	bottom: 10%;
+	width: 100%;
+	text-align: center;
+	-webkit-transition: all .5s ease-in-out;
+	-o-transition: all .5s ease-in-out;
+	transition: all .5s ease-in-out;
+	opacity: 0;
+}
+.plusTimeMessage span {
+	display: block;
+	height: 207px;
+	width: 250px;
+	margin: auto;
+	-webkit-background-size: cover;
+	background-size: cover;
+	background-image: url({3vot}/assets/extraWifiYeah.png);
+}
+.plusTimeMessage.show{
+	bottom: 20%;
+	opacity: 1;
+}
+
+@media (max-width: 768px) {
+	.title {
+		font-size: 4em;
+	}
+	.countdown .number{
+		min-width: 80px;
+		font-size: 7em;
+	}
+}
+@media (max-width: 480px){
+	.title{
+		font-size: 2em;
+	}
+	.countdown {
+		margin: 0;
+	}
+	.countdown .number{
+		min-width: 20px;
+		font-size: 4em;
+		padding: 10px
+	}
+	header{
+		bottom: 5%;
+	}
+}

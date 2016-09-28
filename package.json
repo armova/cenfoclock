@@ -1,0 +1,41 @@
+{
+	"name": "cenfoclock",
+	"description": "",
+	"version": "0.0.10",
+	"threevot": {
+		"version": "10",
+		"screens": {
+			"0-320": "desktop",
+			"320-900": "desktop",
+			"900-1200": "desktop",
+			"1200-5000": "desktop"
+		},
+		"extensions": [
+			".coffee",
+			".eco",
+			".html"
+		],
+		"transforms": [
+			"browserify-eco",
+			"brfs"
+		],
+		"external": {},
+		"gitDependencies": {},
+		"paths": {
+			"sourceBucket": "source.3vot.com",
+			"productionBucket": "3vot.com"
+		},
+		"uploadSource": true,
+		"build": true,
+		"distFolder": "dist",
+		"pathsToExclude": [
+			"node_modules"
+		],
+		"uploadApp": true
+	},
+	"dependencies": {
+		"3vot": "0.1.4",
+		"brfs": "0.0.8",
+		"browserify-eco": "~0.2.4"
+	}
+}
